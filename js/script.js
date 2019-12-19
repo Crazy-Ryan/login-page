@@ -6,9 +6,11 @@ var onClickButton = function() {
   console.log(passcode);
   if ((passcode.value === "123") && (username.value === "123")) {
     loginMes.textContent = "Login Success";
+    loginMes.style.color = "green";
   } else {
-    loginMes.textContent = "Wrong Password!";
     passcode.value = "";
+    loginMes.textContent = "Wrong Password!";
+    loginMes.style.color = "red";
   }
 }
 clickButton.addEventListener("click", onClickButton);
