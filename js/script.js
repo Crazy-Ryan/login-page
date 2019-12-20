@@ -1,14 +1,13 @@
-var username = document.getElementById("user-name")
-var passcode = document.getElementById("pass-word");
+var username = document.getElementById("username");
+var password = document.getElementById("password");
 var loginMes = document.getElementById("login-message");
 var clickButton = document.getElementById("clicker");
 var onClickButton = function() {
-  console.log(passcode);
-  if ((passcode.value === "123") && (username.value === "123")) {
-    loginMes.textContent = "Login Success";
+  if (("123" === password.value) && ("123" === username.value)) {
+    loginMes.textContent = "Login Succeed";
     loginMes.style.color = "green";
   } else {
-    passcode.value = "";
+    password.value = "";
     loginMes.textContent = "Wrong Password!";
     loginMes.style.color = "red";
   }
